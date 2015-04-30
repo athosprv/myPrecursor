@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-/* global parseFloat */
+
+
 
 function print(msg) {
     // shows console msg if debug is on else does nothing
@@ -11,15 +12,13 @@ function print(msg) {
         console.log(msg);
     }
 }
-$(document).ready(function () {
-    $("button#resetButton").on('click keyup', function () {
-        location.reload();
-    });
-});
 
 $(document).ready(function () {
+    $("#tabs").hide();
+    $("button#resetButton").on('click keyup', function () {
+        location.reload();        
+    });    
     $("button#submitButton").on('click keyup', function () {
-        //alert(document.getElementById("investment").value);
         var prec = new precursor();
 
         var investorMap = {"Athos": parseFloat(document.getElementById("investment").value)};//, "Emilios": 750};
@@ -32,8 +31,13 @@ $(document).ready(function () {
 
         for (i = 0; i < 1; i++) {
             prec.getCost(investorMap, r, e, precVal, undercut, printOuts);
-        }
+        }        
+        
+        $("#tabs").show();
+        $(window).resize();
+       
     });
+    
 });
 
 function precursor() {

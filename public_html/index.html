@@ -9,6 +9,13 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <!-- Latest HighCharts -->
+        <script src="http://code.highcharts.com/stock/highstock.js"></script>
+        <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>            
+        <!-- Acordion -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
     </head>
     <body>
         <div class="container">
@@ -20,7 +27,7 @@
             </div>
 
             <h2>Investment</h2>
-            <form role="form">
+            <form role="form" id="mainForm">
                 <label for=investment>Investment Value:</label>
                 <input id=investment name=investment type=number class="form-control" value=5000 required autofocus>
                 <h2>Costs</h2>
@@ -42,8 +49,28 @@
                     <button type=button class="btn btn-success" id="submitButton">Go!</button>
                     <button type=button class="btn btn-info" id="resetButton">Reset</button>
                 </div>
+                    
+                 <script>
+                  $(function() {
+                    $( "#tabs" ).tabs();
+                  });
+                  
+                  $.getScript("js/g.js", function(){});
+                  $("#tabs").hide();
+                 </script>
+                <div id="tabs" class="page-header">
+                  <ul>
+                    <li><a href="#tabs-1">Graph</a></li>
+                    
+                  </ul>
+                  <div id="tabs-1">
+                    <div id='container' style='min-width: 310px; height: 400px;'><div>
+                  </div>
+                </div>                  
+                
             </form>
         </div>
+
     </body>
 </html>
 
