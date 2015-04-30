@@ -1,0 +1,49 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset=utf-8 />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>        
+        <script src="js/precursor.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+               <h1>Welcome to the Precursor Simulator. 
+                  <small>Your soul now belongs to Zommoros</small>
+               </h1>
+                <p>If you try to break this program I will claim your soul instead.</p>
+            </div>
+
+            <h2>Investment</h2>
+            <form role="form">
+                <label for=investment>Investment Value:</label>
+                <input id=investment name=investment type=number class="form-control" value=5000 required autofocus>
+                <h2>Costs</h2>
+                <label for=rareVal>Rare Value:</label>
+                <input id=rareVal name=rareVal type=number class="form-control" value =0.35 required>
+                <label for=exoVal>Exotic Value:</label>
+                <input id=exoVal name=exoVal type=number class="form-control" value=3.49 required>
+                <label for=precVal>Precursor Value:</label>
+                <input id=precVal name=precVal type=number class="form-control" value=950 required>
+                <label for=undercut>Undercut %:</label>
+                <input id=undercut name=undercut type=text class="form-control" value="0.01" required>
+                <h2>Results</h2>
+                    <label for=numPrecs>Precursors Generated:</label>
+                    <input id=numPrecs name=numPrecs type=text class="form-control" value="" readonly>
+
+                    <label for=result>Gold Earned/Lost:</label>
+                    <input id=result name=result type=text class="form-control" value="" readonly>
+                <div style="margin-top: 10px;" >
+                    <button type=button class="btn btn-success" id="submitButton">Go!</button>
+                    <button type=button class="btn btn-info" id="resetButton">Reset</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+
